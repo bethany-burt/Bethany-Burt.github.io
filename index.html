@@ -101,9 +101,9 @@ body[data-view=research] .frame{overflow:visible}
 
 /* Research hero + interactive scale */
 .research-hero{display:flex;flex-direction:column;align-items:stretch;gap:14px;min-height:min(86vh,920px);padding:22px 10px 40px;margin:0 -8px 12px;border-radius:4px;background:color-mix(in srgb,var(--card-fill) 32%,transparent);border:1px solid color-mix(in srgb,var(--line) 28%,transparent);position:relative}
-.research-intro{padding:48px 56px 40px;max-width:none;min-height:320px;width:100%;box-sizing:border-box}
+.research-intro{padding:48px 56px 28px;max-width:none;width:100%;box-sizing:border-box}
 .research-intro h1{font-size:clamp(72px,9vw,120px);font-weight:400;letter-spacing:-.04em;margin:0 0 28px;line-height:1;text-align:left}
-.research-intro .overview{font-size:clamp(20px,1.95vw,26px);line-height:1.65;color:var(--muted);margin:0;max-width:54em}
+.research-intro .overview{font-size:clamp(20px,1.95vw,26px);line-height:1.65;color:var(--muted);margin:0;max-width:54em}.research-intro .overview p{margin:0 0 1.15em;color:inherit;font:inherit}.research-intro .overview p:last-child{margin-bottom:0}
 .scale-explorer{text-align:center;padding:4px 8px 8px;width:100%;margin-top:0}
 .scale-svg{width:100%;max-width:none;height:auto;display:block;margin:8px auto 0;overflow:visible;transform:rotate(-3deg)}.scale-explorer{overflow:visible}.research-hero{overflow:visible}
 .scale-caption{margin:-28px 0 8px;font-size:clamp(30px,3.4vw,44px);color:var(--ink);letter-spacing:.03em;font-weight:400;position:relative;z-index:2}
@@ -381,7 +381,13 @@ body.paused .scale-atom-c{animation:none!important}
   <div class="research-hero">
     <div class="research-intro">
       <h1 id="research-title">Research</h1>
-      <p class="overview">A short overview of my research will go here — how stellar spectroscopy, planetary atmospheres, and molecular astrobiology connect across scales. Replace this paragraph with your own introduction.</p>
+      <div class="overview">
+        <p>To keep it super brief, I want aliens! I want to contribute to the search for life on planets around our own star and others, and hope that extraterrestrial life is found within my lifetime.</p>
+        <p>To narrow down potential targets in the search for life, we have to understand which conditions could support it. We also have to push our understanding of what “life” can look like to the extremes — building a search around Earth-based expectations could leave us blind to existing alternatives.</p>
+        <p>And this is super complicated! There’s so much to understand about each aspect of the system: what energy a star supplies, what materials and conditions a planet provides, and how molecules can organise into something living. Each raises complicated questions in its own right, and my research has taken me into all three areas.</p>
+        <p>But what excites me most is bringing those pieces together. Organisms don’t exist in isolation: they are shaped by the energy available to them, their surroundings, and the history of that environment — the star-planet-life connection. I want to understand how systems with such different scales, compositions, and lifetimes influence one another, what complex molecules they can create, and how these molecules could evolve into living structures.</p>
+        <p>My projects explore both the individual processes and the connections between them, from stellar chemistry to the possibilities for life in unfamiliar environments. You can find out more about each project below.</p>
+      </div>
     </div>
     <div class="scale-explorer">
       <svg class="scale-svg" viewBox="-40 10 740 300" role="img" aria-label="Star connected to planet connected to molecule. Click to explore each topic.">
