@@ -88,7 +88,7 @@ body[data-view=about] .page-title-row{margin:4px 0 22px}
 body[data-view=research] .page-view{max-width:min(1320px,100%);padding-top:28px}
 body[data-view=research] header{height:92px;padding-bottom:14px}
 body[data-view=research] .controls{bottom:10px}
-body[data-view=research] .research-intro{padding-top:10px}
+body[data-view=research] .research-intro{padding-top:calc(10px + 1.65em)}
 body[data-view=research] .frame>main{padding-top:0}
 body[data-view=research] .frame{overflow:visible}
 
@@ -100,13 +100,13 @@ body[data-view=research] .frame{overflow:visible}
 .page-body .muted{color:var(--muted)}
 
 /* Research hero + interactive scale */
-.research-hero{display:flex;flex-direction:column;align-items:stretch;gap:14px;min-height:min(86vh,920px);padding:22px 10px 40px;margin:0 -8px 12px;border-radius:4px;background:color-mix(in srgb,var(--card-fill) 32%,transparent);border:1px solid color-mix(in srgb,var(--line) 28%,transparent);position:relative}
-.research-intro{padding:48px 56px 28px;max-width:none;width:100%;box-sizing:border-box}
+.research-hero{display:flex;flex-direction:column;align-items:stretch;gap:4px;min-height:min(86vh,920px);padding:22px 10px 40px;margin:0 -8px 12px;border-radius:4px;background:color-mix(in srgb,var(--card-fill) 32%,transparent);border:1px solid color-mix(in srgb,var(--line) 28%,transparent);position:relative}
+.research-intro{padding:48px 56px 8px;max-width:none;width:100%;box-sizing:border-box}
 .research-intro h1{font-size:clamp(72px,9vw,120px);font-weight:400;letter-spacing:-.04em;margin:0 0 28px;line-height:1;text-align:left}
 .research-intro .overview{font-size:clamp(20px,1.95vw,26px);line-height:1.65;color:var(--muted);margin:0;max-width:54em}.research-intro .overview p{margin:0 0 1.15em;color:inherit;font:inherit}.research-intro .overview p:last-child{margin-bottom:0}
-.scale-explorer{text-align:center;padding:4px 8px 8px;width:100%;margin-top:0}
-.scale-svg{width:100%;max-width:none;height:auto;display:block;margin:8px auto 0;overflow:visible;transform:rotate(-3deg)}.scale-explorer{overflow:visible}.research-hero{overflow:visible}
-.scale-caption{margin:-28px 0 8px;font-size:clamp(30px,3.4vw,44px);color:var(--ink);letter-spacing:.03em;font-weight:400;position:relative;z-index:2}
+.scale-explorer{text-align:center;padding:0 8px 8px;width:100%;margin-top:0}
+.scale-svg{width:100%;max-width:none;height:auto;display:block;margin:0 auto;overflow:visible;transform:rotate(-3deg)}.scale-explorer{overflow:visible}.research-hero{overflow:visible}
+.scale-caption{margin:-40px 0 8px;font-size:clamp(30px,3.4vw,44px);color:var(--ink);letter-spacing:.03em;font-weight:400;position:relative;z-index:2}
 .scale-node{cursor:pointer;outline:none;-webkit-tap-highlight-color:transparent}a.scale-node:focus,a.scale-node:focus-visible{outline:none;box-shadow:none}
 .scale-node:focus{outline:none}
 .scale-node-hit{transform-box:fill-box;transform-origin:center;transition:transform .35s ease}.scale-planet .scale-node-hit{transform-box:fill-box;transform-origin:center}
