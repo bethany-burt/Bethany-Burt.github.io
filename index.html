@@ -137,13 +137,13 @@ body[data-view=research] .frame{overflow:visible}
 .research-block.reverse .research-copy{order:1}
 .research-media{position:relative;aspect-ratio:4/3;border:1px solid color-mix(in srgb,var(--line) 55%,transparent);background:color-mix(in srgb,var(--card-fill) 55%,transparent);display:grid;place-items:center;overflow:hidden;min-height:200px;z-index:1}
 .research-media img{width:100%;height:100%;object-fit:cover;display:block}
-.research-media.media-figure{background:transparent;border:0;overflow:visible;aspect-ratio:3/4;min-height:0}
+.research-media.media-figure{background:transparent;border:0;overflow:visible;aspect-ratio:3/4;min-height:0;width:min(100%,210px);justify-self:center;align-self:start}
 .research-media.media-figure:before{display:none}
-.research-media.media-figure img,.research-media.media-figure .stripped-star-fig{width:100%;height:100%;object-fit:contain;padding:4px 4px 30px;box-sizing:border-box;display:block}
+.research-media.media-figure img,.research-media.media-figure .stripped-star-fig{width:100%;height:auto;max-height:250px;object-fit:contain;padding:2px 2px 24px;box-sizing:border-box;display:block;margin:0 auto}
 .stripped-star-fig{overflow:visible}
 .research-media .media-placeholder{color:var(--muted);font-size:15px;text-align:center;padding:16px;letter-spacing:.03em}
 .research-media:before{content:'';position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--line) 28%,transparent);pointer-events:none}
-.media-credit{position:absolute;left:10px;right:10px;bottom:6px;margin:0;z-index:2;font-size:clamp(11px,1.05vw,13px);line-height:1.35;color:color-mix(in srgb,var(--muted) 70%,var(--ink));text-align:center}
+.media-credit{position:absolute;left:4px;right:4px;bottom:2px;margin:0;z-index:2;font-size:clamp(10px,0.95vw,12px);line-height:1.3;color:color-mix(in srgb,var(--muted) 70%,var(--ink));text-align:center}
 .media-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
 .media-credit a:hover{color:var(--ink)}
 .research-copy{position:relative;z-index:1}
@@ -711,6 +711,17 @@ body.paused .scale-atom-c{animation:none!important}
         <h3 class="project-title">Into the Hearts of Massive Stars</h3>
         <p class="project-subtitle">Carbon and Nitrogen Abundances as Tracers of CNO Processing</p>
         <p>Through intense radiation, powerful winds, and supernova explosions, massive stars transform the galaxies around them. Their light lets us measure their surface properties, but usually leaves their interiors hidden from view. In certain binary systems, a companion can pull away a star’s outer layers, exposing material once buried deep inside. These “stripped stars” offer a rare opportunity to investigate what nuclear burning has left behind. I study the spectra of a population identified in the Large and Small Magellanic Clouds by Maria Drout, Ylva Götberg and collaborators in 2023. By measuring their temperatures and surface carbon and nitrogen abundances, I test predictions of how massive stars burn their fuel and evolve towards the end of their lives.</p>
+      </div>
+    </article>
+
+    <article class="research-block reverse" id="stars-nitrogen">
+      <div class="research-media" aria-label="Solar nitrogen project image">
+        <span class="media-placeholder">Add a figure or plot<br>for this project</span>
+      </div>
+      <div class="research-copy">
+        <h3 class="project-title">Solar Nitrogen Abundance</h3>
+        <p class="project-subtitle">Nitrogen abundances from non-LTE modelling of CN</p>
+        <p>Solar elemental abundances provide a reference for measuring the composition of other stars, making their accuracy fundamental to stellar astronomy. Nitrogen is difficult to measure from its weak, often blended atomic lines, so molecules such as CN provide complementary diagnostics. Interpreting these requires detailed models of how molecules interact with radiation, including departures from local thermodynamic equilibrium (non-LTE). However, the thousands of molecular energy levels make these calculations computationally expensive. During my undergraduate research with Maria Bergemann’s group at MPIA in Heidelberg, I adapted the established superlevel method to CN’s energy structure, grouping levels while preserving detail for the transitions used to measure nitrogen abundance. I tested the resulting model in a solar atmosphere to investigate how non-LTE effects alter nitrogen abundance estimates, with potential future applications to cooler stars.</p>
       </div>
     </article>
     <article class="research-block reverse" id="planets">
