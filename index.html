@@ -137,8 +137,14 @@ body[data-view=research] .frame{overflow:visible}
 .research-block.reverse .research-copy{order:1}
 .research-media{position:relative;aspect-ratio:4/3;border:1px solid color-mix(in srgb,var(--line) 55%,transparent);background:color-mix(in srgb,var(--card-fill) 55%,transparent);display:grid;place-items:center;overflow:hidden;min-height:200px;z-index:1}
 .research-media img{width:100%;height:100%;object-fit:cover;display:block}
+.research-media.media-figure{background:transparent;border-color:color-mix(in srgb,var(--line) 35%,transparent);overflow:visible}
+.research-media.media-figure:before{display:none}
+.research-media.media-figure img{object-fit:contain;padding:8px 8px 28px;box-sizing:border-box}
 .research-media .media-placeholder{color:var(--muted);font-size:15px;text-align:center;padding:16px;letter-spacing:.03em}
 .research-media:before{content:'';position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--line) 28%,transparent);pointer-events:none}
+.media-credit{position:absolute;left:10px;right:10px;bottom:6px;margin:0;z-index:2;font-size:clamp(11px,1.05vw,13px);line-height:1.35;color:color-mix(in srgb,var(--muted) 70%,var(--ink));text-align:center}
+.media-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.media-credit a:hover{color:var(--ink)}
 .research-copy{position:relative;z-index:1}
 .section-topic{position:absolute;top:10px;right:18px;margin:0;z-index:2;font-size:clamp(40px,5vw,64px);font-weight:400;letter-spacing:-.035em;line-height:1;color:var(--ink);text-align:right;pointer-events:none}
 .research-block:has(.section-topic){padding-top:76px}
@@ -568,9 +574,9 @@ body.paused .scale-atom-c{animation:none!important}
         </g>
       </svg></div>
 
-      <div class="research-media" aria-label="Stars project image">
-        <span class="media-placeholder">Add a figure or plot<br>for this project</span>
-        <!-- <img src="assets/research-stars.png" alt=""> -->
+      <div class="research-media media-figure" aria-label="Stars project image">
+        <img src="assets/stripped_star.png" alt="Illustration of a stripped massive star exposing its helium core">
+        <p class="media-credit">Figure adapted from Ylva Götberg (2017 talk); related paper: <a href="https://ui.adsabs.harvard.edu/abs/2017A%26A...608A..11G/abstract" target="_blank" rel="noopener noreferrer">Götberg et al. 2017, A&amp;A 608, A11</a></p>
       </div>
       <h2 class="section-topic">Stars</h2>
       <div class="research-copy">
