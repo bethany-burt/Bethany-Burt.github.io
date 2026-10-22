@@ -140,8 +140,13 @@ body[data-view=research] .frame{overflow:visible}
 .research-media .media-placeholder{color:var(--muted);font-size:15px;text-align:center;padding:16px;letter-spacing:.03em}
 .research-media:before{content:'';position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--line) 28%,transparent);pointer-events:none}
 .research-copy{position:relative;z-index:1}
+.section-topic{position:absolute;top:10px;right:18px;margin:0;z-index:2;font-size:clamp(40px,5vw,64px);font-weight:400;letter-spacing:-.035em;line-height:1;color:var(--ink);text-align:right;pointer-events:none}
+.research-block:has(.section-topic){padding-top:76px}
 .research-copy h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:var(--ink);line-height:1.15}
+.research-copy h3,.research-copy .project-title{font-size:clamp(24px,2.9vw,34px);font-weight:700;letter-spacing:-.02em;margin:0 0 8px;color:var(--ink);line-height:1.2}
+.research-copy .project-subtitle{margin:0 0 16px;font-size:clamp(15px,1.45vw,18px);line-height:1.4;font-weight:400;letter-spacing:.01em;color:color-mix(in srgb,var(--muted) 88%,var(--ink))}
 .research-copy p{margin:0 0 .9em;font-size:clamp(16px,1.55vw,19px);line-height:1.55;color:var(--muted)}
+.research-copy p:last-child{margin-bottom:0}
 .section-motif{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:visible}
 .section-motif svg{width:100%;height:100%;display:block}
 #stars .motif-rays{opacity:.34}
@@ -567,10 +572,11 @@ body.paused .scale-atom-c{animation:none!important}
         <span class="media-placeholder">Add a figure or plot<br>for this project</span>
         <!-- <img src="assets/research-stars.png" alt=""> -->
       </div>
+      <h2 class="section-topic">Stars</h2>
       <div class="research-copy">
-        <h2>Project title — Stars</h2>
-        <p>Placeholder blurb for your stellar spectroscopy project. Describe the question, approach, and collaborators here.</p>
-        <p>A second short paragraph can expand on methods or recent results.</p>
+        <h3 class="project-title">Into the Hearts of Massive Stars</h3>
+        <p class="project-subtitle">Carbon and Nitrogen Abundances as Tracers of CNO Processing</p>
+        <p>Through intense radiation, powerful winds, and supernova explosions, massive stars transform the galaxies around them. Their light lets us measure their surface properties, but usually leaves their interiors hidden from view. In certain binary systems, a companion can pull away a star’s outer layers, exposing material once buried deep inside. These “stripped stars” offer a rare opportunity to investigate what nuclear burning has left behind. I study the spectra of a population identified in the Large and Small Magellanic Clouds by Maria Drout, Ylva Götberg and collaborators in 2023. By measuring their temperatures and surface carbon and nitrogen abundances, I test predictions of how massive stars burn their fuel and evolve towards the end of their lives.</p>
       </div>
     </article>
     <article class="research-block reverse" id="planets">
