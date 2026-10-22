@@ -10,9 +10,9 @@
       <stop offset="60%" stop-color="#f2cb78"/>
       <stop offset="100%" stop-color="#d8a24c"/>
     </radialGradient>
-    <radialGradient id="g-coral" cx="38%" cy="30%" r="70%">
-      <stop offset="0%" stop-color="#ffc29a"/>
-      <stop offset="45%" stop-color="#ef8f5c"/>
+    <radialGradient id="g-coral" cx="38%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffc8a0"/>
+      <stop offset="50%" stop-color="#ef8f5c"/>
       <stop offset="100%" stop-color="#c85a3a"/>
     </radialGradient>
     <radialGradient id="g-blue" cx="35%" cy="30%" r="65%">
@@ -24,81 +24,103 @@
 
   <!-- Panel 1 -->
   <g transform="translate(210 108)">
-    <ellipse cx="-58" cy="0" rx="78" ry="58" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-dasharray="3.5 5.5" opacity=".92"/>
-    <ellipse cx="58" cy="0" rx="62" ry="48" fill="none" stroke="var(--ink)" stroke-width="2.2" stroke-dasharray="3.5 5.5" opacity=".92"/>
+    <path d="M0 0
+             C-18 -72 -150 -72 -150 0
+             C-150 72 -18 72 0 0
+             C18 58 130 58 130 0
+             C130 -58 18 -58 0 0"
+          fill="none" stroke="var(--ink)" stroke-width="2.9" stroke-dasharray="6.5 4.5"
+          stroke-linecap="round" stroke-linejoin="round" opacity=".98"/>
 
-    <circle cx="-58" cy="0" r="42" fill="url(#g-gold)" stroke="#4d3d2a" stroke-width="2.2"/>
-    <circle cx="-70" cy="-8" r="6.5" fill="#2a2438"/>
-    <circle cx="-46" cy="-8" r="6.5" fill="#2a2438"/>
-    <circle cx="-68.6" cy="-9.4" r="2" fill="#fff8ea"/>
-    <circle cx="-44.6" cy="-9.4" r="2" fill="#fff8ea"/>
-    <path d="M-69 11 Q-58 19 -47 11" fill="none" stroke="#2a2438" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="-68" cy="0" r="40" fill="url(#g-gold)" stroke="#3a3348" stroke-width="1.8"/>
+    <circle cx="-80" cy="-8" r="6.2" fill="#2a2438"/>
+    <circle cx="-56" cy="-8" r="6.2" fill="#2a2438"/>
+    <circle cx="-78.7" cy="-9.3" r="1.9" fill="#fff8ea"/>
+    <circle cx="-54.7" cy="-9.3" r="1.9" fill="#fff8ea"/>
+    <path d="M-79 11 Q-68 18 -57 11" fill="none" stroke="#2a2438" stroke-width="2.3" stroke-linecap="round"/>
 
-    <circle cx="58" cy="0" r="30" fill="url(#g-gold-sm)" stroke="#4d3d2a" stroke-width="2.2"/>
-    <circle cx="49.5" cy="-5" r="5" fill="#2a2438"/>
-    <circle cx="66.5" cy="-5" r="5" fill="#2a2438"/>
-    <circle cx="50.6" cy="-6.1" r="1.6" fill="#fff8ea"/>
-    <circle cx="67.6" cy="-6.1" r="1.6" fill="#fff8ea"/>
-    <path d="M50 9 Q58 16 66 9" fill="none" stroke="#2a2438" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="62" cy="0" r="28" fill="url(#g-gold-sm)" stroke="#3a3348" stroke-width="1.8"/>
+    <circle cx="54" cy="-5" r="4.8" fill="#2a2438"/>
+    <circle cx="70" cy="-5" r="4.8" fill="#2a2438"/>
+    <circle cx="55" cy="-6.1" r="1.5" fill="#fff8ea"/>
+    <circle cx="71" cy="-6.1" r="1.5" fill="#fff8ea"/>
+    <path d="M54.5 8 Q62 14.5 69.5 8" fill="none" stroke="#2a2438" stroke-width="2.1" stroke-linecap="round"/>
   </g>
 
-  <!-- Arrow 1 -->
-  <g transform="translate(210 188)" fill="var(--ink)" stroke="#4d3d2a" stroke-width="1.5" stroke-linejoin="round">
+  <g transform="translate(210 188)" fill="var(--ink)" stroke="#3a3348" stroke-width="1.4" stroke-linejoin="round">
     <path d="M0 -12 V12" stroke-linecap="round" fill="none"/>
     <path d="M-9 5 L0 18 L9 5 Z"/>
   </g>
 
   <!-- Panel 2 -->
   <g transform="translate(210 278)">
-    <path d="M-118 -50
-             C-152 -18 -146 42 -98 54
-             C-58 64 -8 30 10 6
-             C24 -10 20 -34 0 -46
-             C-28 -64 -78 -82 -118 -50 Z"
-          fill="url(#g-coral)" stroke="#4d3d2a" stroke-width="2.2" stroke-linejoin="round"/>
-    <circle cx="-96" cy="-8" r="7" fill="#2a2438"/>
-    <circle cx="-70" cy="-10" r="7" fill="#2a2438"/>
-    <circle cx="-94.4" cy="-9.6" r="2.1" fill="#fff8ea"/>
-    <circle cx="-68.4" cy="-11.6" r="2.1" fill="#fff8ea"/>
-    <ellipse cx="-82" cy="12" rx="8.5" ry="10.5" fill="none" stroke="#2a2438" stroke-width="2.3"/>
+    <path d="M0 0
+             C-16 -64 -138 -64 -138 0
+             C-138 64 -16 64 0 0
+             C16 52 118 52 118 0
+             C118 -52 16 -52 0 0"
+          fill="none" stroke="var(--ink)" stroke-width="1.9" stroke-dasharray="5.5 4"
+          stroke-linecap="round" opacity=".4"/>
 
-    <path d="M12 4 C30 10 44 14 58 8" fill="none" stroke="#ef8f5c" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+    <!-- mostly circular donor, tapering to a point at the figure-8 cross (L1) -->
+    <path d="M0 0
+             C-14 -10 -36 -46 -78 -48
+             C-128 -50 -130 50 -78 48
+             C-36 46 -14 10 0 0 Z"
+          fill="url(#g-coral)" stroke="#3a3348" stroke-width="1.6" stroke-linejoin="round"/>
 
-    <ellipse cx="80" cy="4" rx="34" ry="28" fill="url(#g-gold)" stroke="#4d3d2a" stroke-width="2.2"/>
-    <circle cx="70" cy="-2" r="5.2" fill="#2a2438"/>
-    <circle cx="90" cy="-2" r="5.2" fill="#2a2438"/>
-    <circle cx="71.1" cy="-3.2" r="1.6" fill="#fff8ea"/>
-    <circle cx="91.1" cy="-3.2" r="1.6" fill="#fff8ea"/>
-    <path d="M71 11 Q80 5 89 11" fill="none" stroke="#2a2438" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="-90" cy="-8" r="6.5" fill="#2a2438"/>
+    <circle cx="-66" cy="-8" r="6.5" fill="#2a2438"/>
+    <circle cx="-88.5" cy="-9.5" r="2" fill="#fff8ea"/>
+    <circle cx="-64.5" cy="-9.5" r="2" fill="#fff8ea"/>
+    <ellipse cx="-78" cy="12" rx="8" ry="10" fill="none" stroke="#2a2438" stroke-width="2.2"/>
+
+    <!-- thin stream from L1 tip onto companion -->
+    <path d="M0 0 C20 1 38 5 54 4" fill="none" stroke="#ef8f5c" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- spinning companion -->
+    <ellipse cx="78" cy="4" rx="52" ry="15" fill="none" stroke="var(--ink)" stroke-width="1.8" opacity=".45"/>
+    <ellipse cx="78" cy="4" rx="42" ry="10" fill="none" stroke="var(--ink)" stroke-width="1.5" opacity=".35"/>
+    <ellipse cx="78" cy="4" rx="32" ry="5.5" fill="none" stroke="var(--ink)" stroke-width="1.3" opacity=".28"/>
+    <path d="M30 4 H40 M116 4 H126" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity=".4"/>
+    <path d="M34 -8 Q28 4 34 16 M122 -8 Q128 4 122 16" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" opacity=".32"/>
+
+    <circle cx="78" cy="4" r="30" fill="url(#g-gold)" stroke="#3a3348" stroke-width="1.8"/>
+    <circle cx="69" cy="-2" r="5" fill="#2a2438"/>
+    <circle cx="87" cy="-2" r="5" fill="#2a2438"/>
+    <circle cx="70.1" cy="-3.2" r="1.5" fill="#fff8ea"/>
+    <circle cx="88.1" cy="-3.2" r="1.5" fill="#fff8ea"/>
+    <path d="M69 10 Q78 18 87 10" fill="none" stroke="#2a2438" stroke-width="2.2" stroke-linecap="round"/>
   </g>
 
-  <!-- Arrow 2 -->
-  <g transform="translate(210 362)" fill="var(--ink)" stroke="#4d3d2a" stroke-width="1.5" stroke-linejoin="round">
+  <g transform="translate(210 362)" fill="var(--ink)" stroke="#3a3348" stroke-width="1.4" stroke-linejoin="round">
     <path d="M0 -12 V12" stroke-linecap="round" fill="none"/>
     <path d="M-9 5 L0 18 L9 5 Z"/>
   </g>
 
   <!-- Panel 3 -->
   <g transform="translate(210 455)">
-    <text x="-155" y="-52" fill="var(--ink)" stroke="#4d3d2a" stroke-width="3" paint-order="stroke fill"
+    <text x="-155" y="-52" fill="var(--ink)" stroke="#3a3348" stroke-width="2.6" paint-order="stroke fill"
           font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic">stripped star</text>
     <path d="M-70 -40 C-62 -24 -56 -8 -52 4" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
     <path d="M-60 -2 L-50 6 L-48 -6" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
 
-    <circle cx="-42" cy="22" r="26" fill="url(#g-blue)" stroke="#4d3d2a" stroke-width="2.2"/>
+    <circle cx="-42" cy="22" r="26" fill="url(#g-blue)" stroke="#3a3348" stroke-width="1.8"/>
     <path d="M-52 16 Q-48 12 -44 16" fill="none" stroke="#2a2438" stroke-width="2.2" stroke-linecap="round"/>
     <path d="M-40 16 Q-36 12 -32 16" fill="none" stroke="#2a2438" stroke-width="2.2" stroke-linecap="round"/>
     <path d="M-52 28 Q-42 36 -32 28" fill="none" stroke="#2a2438" stroke-width="2.2" stroke-linecap="round"/>
 
-    <ellipse cx="82" cy="22" rx="58" ry="17" fill="none" stroke="var(--ink)" stroke-width="2" opacity=".5"/>
-    <ellipse cx="82" cy="22" rx="47" ry="11" fill="none" stroke="var(--ink)" stroke-width="1.7" opacity=".38"/>
-    <ellipse cx="82" cy="22" rx="37" ry="6.5" fill="none" stroke="var(--ink)" stroke-width="1.4" opacity=".28"/>
+    <ellipse cx="82" cy="22" rx="62" ry="18" fill="none" stroke="var(--ink)" stroke-width="2" opacity=".5"/>
+    <ellipse cx="82" cy="22" rx="50" ry="12" fill="none" stroke="var(--ink)" stroke-width="1.7" opacity=".38"/>
+    <ellipse cx="82" cy="22" rx="38" ry="6.5" fill="none" stroke="var(--ink)" stroke-width="1.4" opacity=".28"/>
+    <path d="M22 22 H34 M130 22 H142" fill="none" stroke="var(--ink)" stroke-width="1.8" stroke-linecap="round" opacity=".4"/>
+    <path d="M28 8 Q20 22 28 36 M136 8 Q144 22 136 36" fill="none" stroke="var(--ink)" stroke-width="1.6" stroke-linecap="round" opacity=".35"/>
 
-    <circle cx="82" cy="22" r="36" fill="url(#g-gold)" stroke="#4d3d2a" stroke-width="2.2"/>
-    <circle cx="70" cy="14" r="5.8" fill="#2a2438"/>
-    <circle cx="94" cy="14" r="5.8" fill="#2a2438"/>
-    <circle cx="71.3" cy="12.7" r="1.8" fill="#fff8ea"/>
-    <circle cx="95.3" cy="12.7" r="1.8" fill="#fff8ea"/>
-    <path d="M70 30 Q82 40 94 30" fill="none" stroke="#2a2438" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="82" cy="22" r="36" fill="url(#g-gold)" stroke="#3a3348" stroke-width="1.8"/>
+    <circle cx="70" cy="12" r="5.8" fill="#2a2438"/>
+    <circle cx="94" cy="12" r="5.8" fill="#2a2438"/>
+    <circle cx="71.3" cy="10.6" r="1.8" fill="#fff8ea"/>
+    <circle cx="95.3" cy="10.6" r="1.8" fill="#fff8ea"/>
+    <path d="M68 26 Q82 42 96 26" fill="none" stroke="#2a2438" stroke-width="2.6" stroke-linecap="round"/>
   </g>
 </svg>
