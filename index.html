@@ -154,6 +154,12 @@ body[data-view=research] .frame{overflow:visible}
 .research-copy .project-subtitle{margin:0 0 16px;font-size:clamp(19px,1.75vw,22px);line-height:1.4;font-weight:400;letter-spacing:.01em;color:color-mix(in srgb,var(--muted) 88%,var(--ink))}
 .research-copy p{margin:0 0 .9em;font-size:clamp(16px,1.55vw,19px);line-height:1.55;color:color-mix(in srgb,var(--muted) 58%,var(--ink))}
 .research-copy p:last-child{margin-bottom:0}
+.topic-intro{position:relative;z-index:1;grid-column:1/-1;max-width:54em;padding:8px 8px 4px;margin:0 0 8px}
+.topic-intro p{margin:0 0 1em;font-size:clamp(17px,1.65vw,20px);line-height:1.6;color:color-mix(in srgb,var(--muted) 58%,var(--ink))}
+.topic-intro p:last-child{margin-bottom:0}
+.research-block.topic-lead{display:block;padding-bottom:8px}
+.research-block.topic-lead .section-topic{position:absolute;top:10px;right:18px}
+.research-block.topic-lead .topic-intro{padding-top:64px;padding-right:min(28%,180px)}
 .section-motif{position:absolute;inset:0;pointer-events:none;z-index:0;overflow:visible}
 .section-motif svg{width:100%;height:100%;display:block}
 #stars .motif-rays{opacity:.34}
@@ -724,7 +730,7 @@ body.paused .scale-atom-c{animation:none!important}
         <p>Solar elemental abundances provide a reference for measuring the composition of other stars, making their accuracy fundamental to stellar astronomy. Nitrogen is difficult to measure from its weak, often blended atomic lines, so molecules such as CN provide complementary diagnostics. Interpreting these requires detailed models of how molecules interact with radiation, including departures from local thermodynamic equilibrium (non-LTE). However, the thousands of molecular energy levels make these calculations computationally expensive. During my undergraduate research with Maria Bergemann’s group at MPIA in Heidelberg, I adapted the established superlevel method to CN’s energy structure, grouping levels while preserving detail for the transitions used to measure nitrogen abundance. I tested the resulting model in a solar atmosphere to investigate how non-LTE effects alter nitrogen abundance estimates, with potential future applications to cooler stars.</p>
       </div>
     </article>
-    <article class="research-block reverse" id="planets">
+    <article class="research-block topic-lead" id="planets">
       <div class="section-motif" aria-hidden="true"><svg viewBox="0 0 1000 360" preserveAspectRatio="none">
         <g class="motif-haze">
           <ellipse cx="80" cy="60" rx="140" ry="50" fill="var(--planet)" opacity=".25"/>
@@ -737,15 +743,19 @@ body.paused .scale-atom-c{animation:none!important}
           <path d="M1000 160 C860 120 800 220 1000 250Z" fill="var(--planet)" opacity=".12"/>
         </g>
       </svg></div>
-
-      <div class="research-media" aria-label="Planets project image">
+      <h2 class="section-topic">Planets</h2>
+      <div class="topic-intro">
+        <p>Atmospheres shape the climates, surface conditions, and observable spectra of rocky planets. Yet interpreting those spectra remains difficult: different atmospheres can produce similar signals, leaving the nature of the planet uncertain. While stellar classifications connect observable properties to models of structure and evolution, that connection is less established for rocky exoplanets. I model how atmospheric chemistry, climate, and escape interact to determine which atmospheres can form and persist. By mapping these “islands of stability” across planetary and stellar conditions, I aim to identify the atmospheric states we should expect to find and the observations needed to distinguish them. This provides a foundation for assessing habitability and interpreting possible signs of life.</p>
+      </div>
+    </article>
+    <article class="research-block reverse" id="planets-sulfur">
+      <div class="research-media" aria-label="Planets sulfur project image">
         <span class="media-placeholder">Add a figure or plot<br>for this project</span>
-        <!-- <img src="assets/research-planets.png" alt=""> -->
       </div>
       <div class="research-copy">
-        <h2>Project title — Planets</h2>
-        <p>Placeholder blurb for your exoplanet atmosphere work. Outline the science question and what you are modelling or observing.</p>
-        <p>Replace this text with your own project description.</p>
+        <h3 class="project-title">Sulfur as a Tracer of Rocky Interiors</h3>
+        <p class="project-subtitle">Climate–Chemistry Couplings, Hazes, and Observability</p>
+        <p>Volcanic gases connect a planet’s atmosphere to its interior, potentially revealing conditions far beneath the surface. Sulfur-bearing species, including sulfur dioxide (SO₂) and hydrogen sulfide (H₂S), have been proposed as tracers of volcanic activity and the mantle’s oxidation state. However, reactions driven by starlight and atmospheric temperature can transform these gases, altering the signals we observe. Sulfur chemistry can also produce hazes that obscure molecular features, creating nearly flat transmission spectra that are difficult to distinguish from those of planets with thin or absent atmospheres. I am developing a grid of models that couple climate and chemistry to investigate how these processes affect sulfur-bearing atmospheres. By varying mantle oxidation state, stellar irradiation, and host-star type, I predict the distribution of sulfur species and their observable spectral features. This will establish when atmospheric sulfur can constrain a planet’s interior, when hazes conceal that information, and which observations could distinguish these possibilities.</p>
       </div>
     </article>
     <article class="research-block" id="life">
