@@ -128,8 +128,10 @@ body[data-view=research] .frame{overflow:visible}
 @keyframes planet-yaw{0%,100%{transform:rotate(-22deg) translateX(-6px)}50%{transform:rotate(-22deg) translateX(6px)}}
 @keyframes cloud-drift{from{transform:translateX(-10px)}to{transform:translateX(12px)}}
 @keyframes bond-a{0%,100%{transform:rotate(0deg)}50%{transform:rotate(6deg)}}@keyframes bond-b{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-7deg)}}@keyframes bond-c{0%,100%{transform:rotate(0deg)}50%{transform:rotate(5deg)}}@keyframes atom-a{0%,100%{transform:translate(0,0)}50%{transform:translate(-3px,2px)}}@keyframes atom-b{0%,100%{transform:translate(0,0)}50%{transform:translate(2px,-4px)}}@keyframes atom-c{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,3px)}}
-.research-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:8px auto 40px;max-width:860px;color:var(--gold);font-size:14px}
-.research-divider:before,.research-divider:after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--line) 70%,transparent),transparent)}
+.research-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:8px auto 40px;width:100%;max-width:860px;color:var(--gold);font-size:14px;box-sizing:border-box}
+.research-divider-rule{flex:1 1 0;height:1px;min-width:2.5rem;border:0;background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--line) 75%,transparent),transparent);opacity:.85;pointer-events:none}
+.research-divider-rule:last-child{background:linear-gradient(90deg,color-mix(in srgb,var(--line) 75%,transparent),transparent)}
+.research-divider-rule:first-child{background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--line) 75%,transparent))}
 .research-sections{display:flex;flex-direction:column;gap:64px;margin-top:8px}
 .research-block{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px 36px;align-items:center;position:relative;isolation:isolate;padding:28px 18px;scroll-margin-top:110px;overflow:visible}
 .research-block.reverse{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
@@ -566,7 +568,7 @@ body.paused .scale-atom-c{animation:none!important}
 
     </div>
   </div>
-  <div class="research-divider" aria-hidden="true">✦</div>
+  <div class="research-divider" aria-hidden="true"><span class="research-divider-rule"></span>✦<span class="research-divider-rule"></span></div>
   <div class="research-sections">
     <article class="research-block" id="stars">
       <div class="section-motif" aria-hidden="true"><svg viewBox="0 0 1000 360" preserveAspectRatio="none">
@@ -732,7 +734,7 @@ body.paused .scale-atom-c{animation:none!important}
         <p>Solar elemental abundances provide a reference for measuring the composition of other stars, making their accuracy fundamental to stellar astronomy. Nitrogen is difficult to measure from its weak, often blended atomic lines, so molecules such as CN provide complementary diagnostics. Interpreting these requires detailed models of how molecules interact with radiation, including departures from local thermodynamic equilibrium (non-LTE). However, the thousands of molecular energy levels make these calculations computationally expensive. During my undergraduate research with Maria Bergemann’s group at MPIA in Heidelberg, I adapted the established superlevel method to CN’s energy structure, grouping levels while preserving detail for the transitions used to measure nitrogen abundance. I tested the resulting model in a solar atmosphere to investigate how non-LTE effects alter nitrogen abundance estimates, with potential future applications to cooler stars.</p>
       </div>
     </article>
-  <div class="research-divider" aria-hidden="true">✦</div>
+  <div class="research-divider" aria-hidden="true"><span class="research-divider-rule"></span>✦<span class="research-divider-rule"></span></div>
     <article class="research-block topic-lead" id="planets">
       <div class="section-motif" aria-hidden="true"><svg viewBox="0 0 1000 360" preserveAspectRatio="none">
         <g class="motif-haze">
@@ -761,7 +763,7 @@ body.paused .scale-atom-c{animation:none!important}
         <p>Volcanic gases connect a planet’s atmosphere to its interior, potentially revealing conditions far beneath the surface. Sulfur-bearing species, including sulfur dioxide (SO₂) and hydrogen sulfide (H₂S), have been proposed as tracers of volcanic activity and the mantle’s oxidation state. However, reactions driven by starlight and atmospheric temperature can transform these gases, altering the signals we observe. Sulfur chemistry can also produce hazes that obscure molecular features, creating nearly flat transmission spectra that are difficult to distinguish from those of planets with thin or absent atmospheres. I am developing a grid of models that couple climate and chemistry to investigate how these processes affect sulfur-bearing atmospheres. By varying mantle oxidation state, stellar irradiation, and host-star type, I predict the distribution of sulfur species and their observable spectral features. This will establish when atmospheric sulfur can constrain a planet’s interior, when hazes conceal that information, and which observations could distinguish these possibilities.</p>
       </div>
     </article>
-  <div class="research-divider" aria-hidden="true">✦</div>
+  <div class="research-divider" aria-hidden="true"><span class="research-divider-rule"></span>✦<span class="research-divider-rule"></span></div>
     <article class="research-block reverse" id="life">
       <div class="section-motif" aria-hidden="true"><svg viewBox="0 0 1000 360" preserveAspectRatio="xMidYMid slice">
         <defs>
