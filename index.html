@@ -154,7 +154,8 @@ body[data-view=research] .frame{overflow:visible}
 .research-block:has(.section-topic){padding-top:76px}
 .research-block:has(.section-topic.in-flow){padding-top:28px}
 #life{align-items:start}
-#life .research-media{margin-top:calc(clamp(40px,5vw,64px) + 18px)}
+#life .section-topic.in-flow{grid-column:1/-1;order:-1;margin:0 0 14px}
+#life .research-media{margin-top:0;align-self:start}
 .research-copy h2{font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:var(--ink);line-height:1.15}
 .research-copy h3,.research-copy .project-title{font-size:clamp(24px,2.9vw,34px);font-weight:700;letter-spacing:-.02em;margin:0 0 8px;color:var(--ink);line-height:1.2}
 .research-copy .project-subtitle{margin:0 0 16px;font-size:clamp(19px,1.75vw,22px);line-height:1.4;font-weight:400;letter-spacing:.01em;color:color-mix(in srgb,var(--muted) 88%,var(--ink))}
@@ -798,8 +799,8 @@ body.paused .scale-atom-c{animation:none!important}
         <span class="media-placeholder">Add a figure or plot<br>for this project</span>
         <!-- <img src="assets/research-molecules.png" alt=""> -->
       </div>
+      <h2 class="section-topic in-flow">Life</h2>
       <div class="research-copy">
-        <h2 class="section-topic in-flow">Life</h2>
         <h3 class="project-title">Beyond Water</h3>
         <p class="project-subtitle">Lipid self-assembly in ionic liquids</p>
         <p>All known life depends on water, shaping where we search for it on other planets. The classical “habitable zone” marks where liquid water could persist on a planet’s surface, but other liquids may offer possibilities outside these boundaries. Ionic liquids are salts that can remain liquid where water would evaporate, and their formation has been proposed in the sulfuric-acid-rich clouds of Venus. Whether they could support the organisation of molecules into structures resembling cell membranes remains an open question. I use molecular dynamics simulations to study how simple membrane-forming molecules behave in one such liquid, glycinium hydrogen sulfate. By measuring their interactions and observing how they assemble compared with those in water, I investigate whether some of life’s basic structures could form in a different solvent.</p>
