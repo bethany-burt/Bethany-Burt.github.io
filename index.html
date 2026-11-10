@@ -139,9 +139,11 @@ body[data-view=research] .frame{overflow:visible}
 .research-block.reverse .research-copy{order:1}
 .research-media{position:relative;aspect-ratio:4/3;border:1px solid color-mix(in srgb,var(--line) 55%,transparent);background:color-mix(in srgb,var(--card-fill) 55%,transparent);display:grid;place-items:center;overflow:hidden;min-height:200px;z-index:1}
 .research-media img,.research-media video{width:100%;height:100%;object-fit:cover;display:block}
-#planets-sulfur .research-media{aspect-ratio:1/1;background:transparent;border:0!important}
+#planets-sulfur .research-media{aspect-ratio:1/1;background:transparent;border:0!important;overflow:hidden}
 #planets-sulfur .research-media:before{display:none!important;content:none!important}
-#planets-sulfur .research-media video{width:100%;height:100%;object-fit:contain;display:block;background:transparent;transform:none}
+#planets-sulfur .research-media video{width:100%;height:100%;object-fit:cover;display:block;background:transparent;transform:none}
+#planets-sulfur .sulfur-caption{position:absolute;left:50%;bottom:4.5%;transform:translateX(-50%);z-index:5;margin:0;padding:0 12px;width:min(92%,420px);text-align:center;font-size:clamp(13px,1.35vw,17px);letter-spacing:.04em;line-height:1.25;color:color-mix(in srgb,var(--ink) 92%,var(--gold));text-shadow:0 1px 10px rgba(0,0,0,.75),0 0 2px rgba(0,0,0,.9);opacity:0;transition:opacity .45s ease;pointer-events:none;white-space:normal}
+#planets-sulfur .sulfur-caption.is-on{opacity:1}
 .research-media.media-figure{background:transparent;border:0;overflow:visible;aspect-ratio:3/4;min-height:0;width:min(100%,320px);justify-self:center;align-self:start}
 .research-media.media-figure:before{display:none}
 .research-media.media-figure img,.research-media.media-figure .stripped-star-fig{width:100%;height:auto;max-height:380px;object-fit:contain;padding:2px 2px 26px;box-sizing:border-box;display:block;margin:0 auto}
@@ -789,7 +791,8 @@ body.paused .scale-atom-c{animation:none!important}
     </article>
     <article class="research-block reverse" id="planets-sulfur">
       <div class="research-media" aria-label="Planets sulfur project animation">
-        <video src="assets/sulfur_atmosphere.mp4?v=20261110j" autoplay muted loop playsinline preload="metadata" aria-label="Animated diagram of volcanic sulfur chemistry in a planetary atmosphere"></video>
+        <video id="sulfur-video" src="assets/sulfur_atmosphere.mp4?v=20261110k" autoplay muted loop playsinline preload="metadata" aria-label="Animated diagram of volcanic sulfur chemistry in a planetary atmosphere"></video>
+        <p class="sulfur-caption" id="sulfur-caption" aria-live="polite"></p>
       </div>
       <div class="research-copy">
         <h3 class="project-title">Reading Interiors Through Atmospheric Sulfur</h3>
@@ -967,6 +970,48 @@ document.querySelectorAll('[data-jump]').forEach(a=>{
 
 window.addEventListener('popstate', ()=>applyRoute());
 window.addEventListener('hashchange', ()=>applyRoute());
+
+/* Sulfur animation captions — tune start/end times (seconds) against the loop. */
+const sulfurCaptions=[
+  {start:1.4,end:3.9,text:'Outgassing'},
+  {start:3.9,end:6.6,text:'Atmospheric temperature'},
+  {start:6.6,end:9.2,text:'Mixing'},
+  {start:9.2,end:12.0,text:'Hazes / Clouds'},
+  {start:12.0,end:15.0,text:'Photochemistry'},
+  {start:15.0,end:18.0,text:'Radiative transfer'},
+  {start:18.0,end:21.4,text:'Escape / Outgassing feedback'},
+  {start:21.4,end:25.2,text:'Observed transmission region'}
+];
+(function syncSulfurCaptions(){
+  const video=document.querySelector('#sulfur-video');
+  const caption=document.querySelector('#sulfur-caption');
+  if(!video||!caption) return;
+  let current='';
+  const fadeMs=450;
+  function show(text){
+    if(text===current) return;
+    if(!text){
+      caption.classList.remove('is-on');
+      current='';
+      return;
+    }
+    const apply=()=>{caption.textContent=text;caption.classList.add('is-on');current=text};
+    if(current){
+      caption.classList.remove('is-on');
+      setTimeout(apply, fadeMs);
+    }else apply();
+  }
+  function tick(){
+    const t=video.currentTime||0;
+    const hit=sulfurCaptions.find(c=>t>=c.start&&t<c.end);
+    show(hit?hit.text:'');
+  }
+  video.addEventListener('timeupdate', tick);
+  video.addEventListener('seeked', tick);
+  video.addEventListener('play', tick);
+  tick();
+})();
+
 applyRoute();
 
 const li=document.querySelector('#linkedin');
