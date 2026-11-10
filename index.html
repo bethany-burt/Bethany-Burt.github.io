@@ -977,14 +977,14 @@ window.addEventListener('hashchange', ()=>applyRoute());
 
 /* Sulfur animation captions — tune start/end times (seconds) against the loop. */
 const sulfurCaptions=[
-  {start:1.4,end:3.9,text:'Outgassing'},
-  {start:3.9,end:6.6,text:'Atmospheric temperature'},
-  {start:6.6,end:9.2,text:'Mixing'},
-  {start:9.2,end:12.0,text:'Hazes / Clouds'},
-  {start:12.0,end:15.0,text:'Photochemistry'},
-  {start:15.0,end:18.0,text:'Radiative transfer'},
-  {start:18.0,end:21.4,text:'Escape / Outgassing feedback'},
-  {start:21.4,end:25.2,text:'Observed transmission region'}
+  {start:0.0,end:2.5,text:'Outgassing'},
+  {start:2.5,end:5.2,text:'Atmospheric temperature'},
+  {start:5.2,end:7.8,text:'Mixing'},
+  {start:7.8,end:10.6,text:'Hazes / Clouds'},
+  {start:10.6,end:13.6,text:'Photochemistry'},
+  {start:13.6,end:16.6,text:'Radiative transfer'},
+  {start:16.6,end:20.0,text:'Escape / Outgassing feedback'},
+  {start:20.0,end:25.2,text:'Observed transmission region'}
 ];
 (function syncSulfurCaptions(){
   const video=document.querySelector('#sulfur-video');
