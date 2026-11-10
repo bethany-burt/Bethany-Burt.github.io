@@ -996,15 +996,22 @@ const sulfurCaptions=[
   function setCaption(text){
     if(text===current) return;
     const next=text;
+    const had=!!current;
     current=next;
     if(pending){clearTimeout(pending);pending=null}
-    caption.classList.remove('is-on');
-    pending=setTimeout(()=>{
+    const reveal=()=>{
       caption.textContent=next||'';
       if(!next) return;
       void caption.offsetWidth;
       caption.classList.add('is-on');
-    }, fadeMs);
+    };
+    if(!had){
+      // first cue: fade in immediately
+      reveal();
+      return;
+    }
+    caption.classList.remove('is-on');
+    pending=setTimeout(reveal, fadeMs);
   }
   function tick(){
     if(video.paused&&video.currentTime===0) return;
