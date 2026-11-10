@@ -143,12 +143,14 @@ body[data-view=research] .frame{overflow:visible}
 .research-media.media-figure:before{display:none}
 .research-media.media-figure img,.research-media.media-figure .stripped-star-fig{width:100%;height:auto;max-height:380px;object-fit:contain;padding:2px 2px 26px;box-sizing:border-box;display:block;margin:0 auto}
 .stripped-star-fig{overflow:visible}
-.research-media.media-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;column-gap:2px;align-items:start;aspect-ratio:auto;min-height:0;overflow:visible;background:transparent;border:0;padding:0;width:100%;max-width:none}
+.research-media.media-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;column-gap:0;align-items:start;aspect-ratio:auto;min-height:0;overflow:visible;background:transparent;border:0;padding:0;width:100%;max-width:none}
 .research-media.media-pair:before{display:none}
 .research-media.media-pair .media-shot{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:0}
-.research-media.media-pair img{width:100%;height:auto;max-height:560px;object-fit:contain;display:block}
-.research-media.media-pair .media-caption{margin:0;font-size:clamp(12px,1.15vw,14px);line-height:1.35;text-align:center;color:color-mix(in srgb,var(--muted) 55%,var(--ink))}
-#life-water{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.research-media.media-pair .media-shot:first-child{margin-right:-12%;position:relative;z-index:1}
+.research-media.media-pair .media-shot:last-child{margin-left:-12%;position:relative;z-index:2}
+.research-media.media-pair img{width:100%;height:auto;max-height:420px;object-fit:contain;display:block}
+.research-media.media-pair .media-caption{margin:0;font-size:clamp(12px,1.15vw,14px);line-height:1.35;text-align:center;color:color-mix(in srgb,var(--muted) 55%,var(--ink));position:relative;z-index:3}
+#life-water{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
 #life-water .research-media{min-width:0}
 .research-media .media-placeholder{color:var(--muted);font-size:15px;text-align:center;padding:16px;letter-spacing:.03em}
 .research-media:before{content:'';position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--line) 28%,transparent);pointer-events:none}
