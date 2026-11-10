@@ -143,15 +143,15 @@ body[data-view=research] .frame{overflow:visible}
 .research-media.media-figure:before{display:none}
 .research-media.media-figure img,.research-media.media-figure .stripped-star-fig{width:100%;height:auto;max-height:380px;object-fit:contain;padding:2px 2px 26px;box-sizing:border-box;display:block;margin:0 auto}
 .stripped-star-fig{overflow:visible}
-.research-media.media-pair{display:grid;grid-template-columns:1fr 1fr;gap:0;column-gap:0;align-items:start;aspect-ratio:auto;min-height:0;overflow:visible;background:transparent;border:0;padding:0;width:100%;max-width:none}
+.research-media.media-pair{display:flex;flex-direction:row;justify-content:flex-start;align-items:flex-start;gap:0;aspect-ratio:auto;min-height:0!important;height:auto;overflow:visible;background:transparent;border:0;padding:0;width:auto;max-width:100%}
 .research-media.media-pair:before{display:none}
-.research-media.media-pair .media-shot{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0}
-.research-media.media-pair .media-shot:first-child{margin-right:-14%;position:relative;z-index:1}
-.research-media.media-pair .media-shot:last-child{margin-left:-14%;position:relative;z-index:2}
-.research-media.media-pair img{width:100%;height:auto;max-height:220px;object-fit:contain;display:block;transform:none}
-.research-media.media-pair .media-caption{margin:0;font-size:clamp(12px,1.15vw,14px);line-height:1.35;text-align:center;color:color-mix(in srgb,var(--muted) 55%,var(--ink));position:relative;z-index:3}
-#life-water{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);overflow:visible}
-#life-water .research-media{min-width:0;justify-self:start;width:100%;max-width:none;margin-left:0;transform:translateX(-0.6rem);transform-origin:left center}
+.research-media.media-pair .media-shot{display:flex;flex-direction:column;align-items:center;gap:6px;width:150px;flex:0 0 150px}
+.research-media.media-pair .media-shot:first-child{margin-right:-28px;position:relative;z-index:1}
+.research-media.media-pair .media-shot:last-child{margin-left:-28px;position:relative;z-index:2}
+.research-media.media-pair img{width:150px!important;max-width:150px!important;height:150px!important;max-height:150px!important;object-fit:contain;display:block;transform:none}
+.research-media.media-pair .media-caption{margin:0;max-width:150px;font-size:clamp(11px,1.05vw,13px);line-height:1.3;text-align:center;color:color-mix(in srgb,var(--muted) 55%,var(--ink));position:relative;z-index:3}
+#life-water{grid-template-columns:minmax(0,.78fr) minmax(0,1.35fr);overflow:visible}
+#life-water .research-media{min-width:0;justify-self:start;align-self:start;width:auto;max-width:280px;margin-left:-0.5rem;transform:none}
 #life-water .research-copy{min-width:0;position:relative;z-index:4}
 .research-media .media-placeholder{color:var(--muted);font-size:15px;text-align:center;padding:16px;letter-spacing:.03em}
 .research-media:before{content:'';position:absolute;inset:8px;border:1px solid color-mix(in srgb,var(--line) 28%,transparent);pointer-events:none}
@@ -824,11 +824,11 @@ body.paused .scale-atom-c{animation:none!important}
     <article class="research-block" id="life-water">
       <div class="research-media media-pair" aria-label="Beyond Water project simulations">
         <figure class="media-shot">
-          <img src="assets/il_speedy.gif" alt="Molecular dynamics simulation in HSO4-/Gly+ ionic liquid">
+          <img src="assets/il_speedy.gif?v=20261110b" alt="Molecular dynamics simulation in HSO4-/Gly+ ionic liquid">
           <figcaption class="media-caption">HSO<sub>4</sub><sup>−</sup>/Gly<sup>+</sup> ionic liquid</figcaption>
         </figure>
         <figure class="media-shot">
-          <img src="assets/il_lipid_398.gif" alt="Lipids trapped in ionic liquid">
+          <img src="assets/il_lipid_398.gif?v=20261110b" alt="Lipids trapped in ionic liquid">
           <figcaption class="media-caption">Lipids trapped in ionic liquid</figcaption>
         </figure>
       </div>
